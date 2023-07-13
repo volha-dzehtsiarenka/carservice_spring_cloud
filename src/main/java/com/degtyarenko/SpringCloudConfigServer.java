@@ -2,8 +2,7 @@ package com.degtyarenko;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
  * Описание класса
@@ -12,10 +11,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @since ${DATE}
  */
 @SpringBootApplication
-@ConfigurationPropertiesScan
-@EnableTransactionManagement
-public class Application {
+@EnableConfigServer
+public class SpringCloudConfigServer {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(SpringCloudConfigServer.class, args);
     }
 }
