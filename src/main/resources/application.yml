@@ -1,0 +1,10 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          default-label: master
+          clone-on-start: true
+          uri: https://github.com/volha-dzehtsiarenka/config_spring_cloud
